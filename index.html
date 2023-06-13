@@ -22,7 +22,7 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 2rem;
         }
         hr {
             border: 0;
@@ -32,10 +32,16 @@
         .link-container {
             margin-top: 2rem;
         }
+        h3 {
+          /* text-align: center; */
+          margin-bottom: 1rem;
+        }
         .links{
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           grid-gap: 2rem 1rem;
+          margin: 2rem 0 3rem;
+          /* text-align: center; */
         }
         a {
           color: rgb(22, 74, 82) !important;
@@ -78,26 +84,49 @@
 
         .images {
           margin-top: 4rem;
-          display: grid;
-          grid-gap: 1rem;
-          grid-template-columns: repeat(4, 1fr);
+          display: flex;
+          /* flex-wrap: wrap; */
+          gap: 1rem;
           
 
         }
-        img {
-          /* max-width: 100%; */
-          height: 170px
+        .images a {
+          flex: 1 1 0px;
+          /* width: 50%; */
+          /* height: 170px */
         }
-        @media screen and (max-width: 600px) {
+        img {
+          max-width: 100%;
+          flex: 1 1 0px;
+          /* height: 170px */
+        }
+        @media screen and (max-width: 720px) {
             .container {
-                padding: 10px;
+                padding: 1.2rem;
+            }
+            .links{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            /* .images {
+                grid-template-columns: repeat(2, 1fr);
+            } */
+            .images {
+                display: block;
+            }
+            .images img {
+                width: 100%;
+                height: auto;
+                margin: .2rem 0
+            } 
+        }
+        @media screen and (max-width: 320px) {
+            .container {
+                padding: 1rem;
             }
             .links{
                 grid-template-columns: repeat(2, 1fr);
             }
-            .images {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            
         }
     </style>
 </head>
@@ -108,14 +137,13 @@
         <a id="toggleTheme">
           <img src="./img/dark_mode.svg" alt="Enter dark mode">
         </a>
-        <p>Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, "Siren Call," releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age.</p>
+        <p>Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, <strong>Siren Call</strong>, releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age.</p>
         <p>Eugene Delta's debut album, <strong>Calm Down, It's Over</strong> (werk music 2021) captivated audiences with its innovative storytelling and thought-provoking narratives. Expect a deeper exploration of these themes in the forthcoming release.</p>
         <!-- <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe> -->
 
         <div class="link-container">
         
-          <h2>Follow Eugene Delta</h2>
-        <br>
+          <h3>Contact Eugene Delta</h3>
         <div class="links">
             <a href="https://eugenedelta.bandcamp.com/" target="_blank">Bandcamp</a>
             <a href="https://open.spotify.com/artist/36Ogpxb8MDNC1CpXBVnYml?si=qBbyNcHuRdylZzTpedBLFw" target="_blank">Spotify</a>
@@ -153,12 +181,12 @@
       // Quotes Carousel
       var quotes = 
       {de: [
-      '"Stilistisch reicht die Platte von Singersongwriter-Sounds bis zu hymnischem Pop. Inhaltlich geht es ums Ende. Eine kleine Affäre, aber auch der Planet, ein Traum, alles hat bekanntlich ein Ende. Nach dreizehn Songs hat auch die Platte ein Ende, aber ganz ehrlich: wir haben sofort wieder von vorne begonnen. Eine superschöne Sache!" <br><br> - "Tonträger des Monats Juni 2021", hauberntaucher.at',
+      '"Stilistisch reicht die Platte von Singersongwriter-Sounds bis zu hymnischem Pop. Inhaltlich geht es ums Ende. Eine kleine Affäre, aber auch der Planet, ein Traum, alles hat bekanntlich ein Ende. Nach dreizehn Songs hat auch die Platte ein Ende, aber ganz ehrlich: wir haben sofort wieder von vorne begonnen. Eine superschöne Sache!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
       '"Emanuel Donner hat sich für sein Soloalbum \'Calm Down, It’s Over\' an eine Gratwanderung zwischen verdrossenem Realitätsverständnis und phantastischen Gedankenspielen gewagt."<br><br> - Robert Fröwein, krone.at',
       // '"Drittea enucae"'
       ],
       en: [
-      '"Stylistically, the album ranges from singer-songwriter sounds to anthemic pop. Thematically, it\'s about endings. A small affair, but also the planet, a dream, everything is known to have an end. After thirteen songs, the album also comes to an end, but honestly, we immediately started over. It\'s a super beautiful thing!" <br><br> - "Tonträger des Monats Juni 2021", hauberntaucher.at',
+      '"Stylistically, the album ranges from singer-songwriter sounds to anthemic pop. Thematically, it\'s about endings. A small affair, but also the planet, a dream, everything is known to have an end. After thirteen songs, the album also comes to an end, but honestly, we immediately started over. It\'s a super beautiful thing!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
       '"Emanuel Donner embarked on a tightrope walk between disgruntled understanding of reality and fantastic mind games for his solo album, \'Calm Down, It\'s Over\'." <br><br> - Robert Fröwein, krone.at',
       // '"Samethung saelse"'
       ]};
