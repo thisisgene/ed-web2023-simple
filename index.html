@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Eugene Delta - Official Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, 'Siren Call,' releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -74,17 +76,26 @@
           background: rgba(0,0,0, 0.3);
         }
 
-        .image {
+        .images {
           margin-top: 4rem;
+          display: grid;
+          grid-gap: 1rem;
+          grid-template-columns: repeat(4, 1fr);
+          
+
         }
         img {
-          max-width: 300px;
+          /* max-width: 100%; */
+          height: 170px
         }
         @media screen and (max-width: 600px) {
             .container {
                 padding: 10px;
             }
             .links{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .images {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -117,10 +128,20 @@
             <div id="quotes"></div>
             <div id="hiddenQuote"></div>
           </div>
-          <div class="image">
+          <div class="images">
             <a href="./img/ed_cigar.jpg" target="download">
               <img src="./img/ed_cigar.jpg" alt="Eugene Delta" />
             </a>
+            <a href="./img/ed_15.png" target="download">
+              <img src="./img/ed_15.png" alt="Eugene Delta" />
+            </a>
+            <a href="./img/ed_18.jpg" target="download">
+              <img src="./img/ed_18.jpg" alt="Eugene Delta" />
+            </a>
+            <a href="./img/ed_crowd.jpeg" target="download">
+              <img src="./img/ed_crowd.jpeg" alt="Eugene Delta" />
+            </a>
+
           </div>
           <p>© 2023 Eugene Delta</p>
         </div>
@@ -133,13 +154,13 @@
       var quotes = 
       {de: [
       '"Stilistisch reicht die Platte von Singersongwriter-Sounds bis zu hymnischem Pop. Inhaltlich geht es ums Ende. Eine kleine Affäre, aber auch der Planet, ein Traum, alles hat bekanntlich ein Ende. Nach dreizehn Songs hat auch die Platte ein Ende, aber ganz ehrlich: wir haben sofort wieder von vorne begonnen. Eine superschöne Sache!" <br><br> - "Tonträger des Monats Juni 2021", hauberntaucher.at',
-      '"Noch eine wuite."',
-      '"Drittea enucae"'
+      '"Emanuel Donner hat sich für sein Soloalbum \'Calm Down, It’s Over\' an eine Gratwanderung zwischen verdrossenem Realitätsverständnis und phantastischen Gedankenspielen gewagt."<br><br> - Robert Fröwein, krone.at',
+      // '"Drittea enucae"'
       ],
       en: [
       '"Stylistically, the album ranges from singer-songwriter sounds to anthemic pop. Thematically, it\'s about endings. A small affair, but also the planet, a dream, everything is known to have an end. After thirteen songs, the album also comes to an end, but honestly, we immediately started over. It\'s a super beautiful thing!" <br><br> - "Tonträger des Monats Juni 2021", hauberntaucher.at',
-      '"Another good quiten."',
-      '"Samethung saelse"'
+      '"Emanuel Donner embarked on a tightrope walk between disgruntled understanding of reality and fantastic mind games for his solo album, \'Calm Down, It\'s Over\'." <br><br> - Robert Fröwein, krone.at',
+      // '"Samethung saelse"'
       ]};
       console.log(quotes[0])
       var quoteIndex = 0;
@@ -162,7 +183,7 @@
       displayQuote();
 
       // Then set the interval to keep displaying new quotes
-      setInterval(displayQuote, 5000); // Change every 5 seconds
+      setInterval(displayQuote, 25000); // Change every 5 seconds
 
       // Language Toggle
       // document.getElementById('toggleLang').addEventListener('click', function() {
