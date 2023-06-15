@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <style>
         body {
             font-family: 'Azeret Mono', monospace;
@@ -40,7 +41,10 @@
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           grid-gap: 2rem 1rem;
-          margin: 2rem 0 3rem;
+          margin: 2rem 0 1rem;
+          /* border: 1px solid #ccc; */
+          background-color: rgba(255,255,255, 0.3);
+          padding: 1rem;
           /* text-align: center; */
         }
         a {
@@ -67,6 +71,7 @@
         .quotes-container {
           position: relative;
           margin-top: 2rem;
+          margin-bottom: 2rem;
           font-size: 1rem;
           font-style: italic;
           /* height: 8rem; */
@@ -76,8 +81,20 @@
         #hiddenQuote {
           visibility: hidden;
           padding: .5rem;
-          
         }
+        .presskit {
+          background-color: rgba(255,255,255, 0.3);
+          padding: 1rem;
+        }
+        .presskit a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+        .presskit a span {
+          margin-right: .5rem;
+        }
+
         body.dark .quotes-container {
           background: rgba(0,0,0, 0.3);
         }
@@ -137,13 +154,13 @@
         <a id="toggleTheme">
           <img src="./img/dark_mode.svg" alt="Enter dark mode">
         </a>
-        <p>Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, <strong>Siren Call</strong>, releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age.</p>
+        <p>Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, <strong>Siren Call</strong>, releasing June 30th 2023, delves into the paradoxes of modern life, capturing the lure and strain of our digital age.</p>
         <p>Eugene Delta's debut album, <strong>Calm Down, It's Over</strong> (werk music 2021) captivated audiences with its innovative storytelling and thought-provoking narratives. Expect a deeper exploration of these themes in the forthcoming release.</p>
-        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe>
+        <iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe>
+        <!-- <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe> -->
 
         <div class="link-container">
         
-          <h3>Contact Eugene Delta</h3>
         <div class="links">
             <a href="https://eugenedelta.bandcamp.com/" target="_blank">Bandcamp</a>
             <a href="https://open.spotify.com/artist/36Ogpxb8MDNC1CpXBVnYml?si=qBbyNcHuRdylZzTpedBLFw" target="_blank">Spotify</a>
@@ -155,6 +172,13 @@
           <div id="quotesContainer" class="quotes-container">
             <div id="quotes"></div>
             <div id="hiddenQuote"></div>
+          </div>
+          <div class="presskit">
+            <a target="_blank" href="https://presskit.eugenedelta.com">
+              <span class="material-symbols-outlined">
+                newsmode
+                </span>
+              Presskit</a>
           </div>
           <div class="images">
             <a href="./img/ed_cigar.jpg" target="download">
@@ -228,12 +252,18 @@
       document.getElementById('toggleTheme').addEventListener('click', function() {
           if(document.body.classList.contains('dark')) {
               document.body.classList.remove('dark');
+              // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/";
               document.getElementById('toggleTheme').innerHTML = '<img src="./img/dark_mode.svg" alt="Enter dark mode">';
           } else {
               document.body.classList.add('dark');
+              // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=333333/linkcol=ffffff/transparent=true/";
               document.getElementById('toggleTheme').innerHTML = '<img src="./img/light_mode.svg" alt="Enter light mode">';
           }
       });
+
+      
+
+
   </script>
 </body>
 </html>
