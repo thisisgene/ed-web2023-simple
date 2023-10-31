@@ -1,241 +1,279 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Eugene Delta - Official Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, 'Siren Call,' releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta
+      name="description"
+      content="Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, 'Siren Call,' releasing soon, delves into the paradoxes of modern life, capturing the lure and strain of our digital age."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <style>
-        body {
-            font-family: 'Azeret Mono', monospace;
-            margin: 0;
-            padding: 0;
-            background: #f0f0f0;
-            transition: background 0.5s ease;
-        }
-        body.dark {
-            background: #333;
-            color: #fff;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        hr {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 40px 0;
-        }
-        .link-container {
-            margin-top: 2rem;
-        }
-        h3 {
-          /* text-align: center; */
-          margin-bottom: 1rem;
-        }
-        .links{
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          grid-gap: 2rem 1rem;
-          margin: 2rem 0 1rem;
-          /* border: 1px solid #ccc; */
-          background-color: rgba(255,255,255, 0.3);
-          padding: 1rem;
-          /* text-align: center; */
-        }
-        a {
-          color: rgb(22, 74, 82) !important;
-          transition: color 0.5s ease;
-        }
-        body.dark a {
-            color: #ddd !important;
-        }
-
-        #toggleTheme {
-          cursor: pointer;
-          margin: 0 0 .5rem;
-          display: inline-block;
-          height: 30px;
-          width: 30px;
-          opacity: .8;
-        }
-        #toggleTheme img {
-          height: 100%;
-          width: 100%;
-        }
-
-        .quotes-container {
-          position: relative;
+      body {
+          font-family: 'Azeret Mono', monospace;
+          margin: 0;
+          padding: 0;
+          background: #f0f0f0;
+          transition: background 0.5s ease;
+      }
+      body.dark {
+          background: #333;
+          color: #fff;
+      }
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 2rem;
+      }
+      hr {
+          border: 0;
+          border-top: 1px solid #ccc;
+          margin: 40px 0;
+      }
+      .link-container {
           margin-top: 2rem;
-          margin-bottom: 2rem;
-          font-size: 1rem;
-          font-style: italic;
-          /* height: 8rem; */
-          padding: 2rem 1rem;
-          background: rgba(255,255,255, 0.3);
-        }
-        #hiddenQuote {
-          visibility: hidden;
-          padding: .5rem;
-        }
-        .presskit {
-          background-color: rgba(255,255,255, 0.3);
-          padding: 1rem;
-        }
-        .presskit a {
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-        }
-        .presskit a span {
-          margin-right: .5rem;
-        }
-
-        body.dark .quotes-container {
-          background: rgba(0,0,0, 0.3);
-        }
-
-        .images {
-          margin-top: 4rem;
-          display: flex;
-          /* flex-wrap: wrap; */
-          gap: 1rem;
-          
-
-        }
-        .images a {
-          flex: 1 1 0px;
-          /* width: 50%; */
-          /* height: 170px */
-        }
-        img {
-          max-width: 100%;
-          flex: 1 1 0px;
-          /* height: 170px */
-        }
-        @media screen and (max-width: 720px) {
-            .container {
-                padding: 1.2rem;
-            }
-            .links{
-                grid-template-columns: repeat(3, 1fr);
-            }
-            /* .images {
-                grid-template-columns: repeat(2, 1fr);
-            } */
-            .images {
-                display: block;
-            }
-            .images img {
-                width: 100%;
-                height: auto;
-                margin: .2rem 0
-            } 
-        }
-        @media screen and (max-width: 320px) {
-            .container {
-                padding: 1rem;
-            }
-            .links{
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Eugene Delta</h1>
-        <!-- <button id="toggleLang">Toggle Language</button> -->
-        <a id="toggleTheme">
-          <img src="./img/dark_mode.svg" alt="Enter dark mode">
-        </a>
-        <p>Eugene Delta is the music project of Vienna-based artist Emanuel Donner. Their work explores the complexities of human experience through a unique blend of indie pop/rock. The upcoming single, <strong>Siren Call</strong>, releasing June 30th 2023, delves into the paradoxes of modern life, capturing the lure and strain of our digital age.</p>
-        <p>Eugene Delta's debut album, <strong>Calm Down, It's Over</strong> (werk music 2021) captivated audiences with its innovative storytelling and thought-provoking narratives. Expect a deeper exploration of these themes in the forthcoming release.</p>
-        <iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe>
-        <!-- <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe> -->
-
-        <div class="link-container">
-        
-        <div class="links">
-            <a href="https://eugenedelta.bandcamp.com/" target="_blank">Bandcamp</a>
-            <a href="https://open.spotify.com/artist/36Ogpxb8MDNC1CpXBVnYml?si=qBbyNcHuRdylZzTpedBLFw" target="_blank">Spotify</a>
-            <a href="https://www.instagram.com/eugene.delta/" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/@eugenedelta" target="_blank">YouTube</a>
-            <a href="https://www.facebook.com/eugenedelta/" target="_blank">Facebook</a>
-            <a href="mailto:contact@eugenedelta.com">Email</a>
-          </div>
-          <div id="quotesContainer" class="quotes-container">
-            <div id="quotes"></div>
-            <div id="hiddenQuote"></div>
-          </div>
-          <div class="presskit">
-            <a target="_blank" href="https://presskit.eugenedelta.com">
-              <span class="material-symbols-outlined">
-                newsmode
-                </span>
-              Presskit</a>
-          </div>
-          <div class="images">
-            <a href="./img/ed_cigar.jpg" target="download">
-              <img src="./img/ed_cigar.jpg" alt="Eugene Delta" />
-            </a>
-            <a href="./img/ed_15.png" target="download">
-              <img src="./img/ed_15.png" alt="Eugene Delta" />
-            </a>
-            <a href="./img/ed_18.jpg" target="download">
-              <img src="./img/ed_18.jpg" alt="Eugene Delta" />
-            </a>
-            <a href="./img/ed_crowd.jpeg" target="download">
-              <img src="./img/ed_crowd.jpeg" alt="Eugene Delta" />
-            </a>
-
-          </div>
-          <p>© 2023 Eugene Delta</p>
-        </div>
-
-    
-    </div>
-    <script>
-      let lang = 'en';
-      // Quotes Carousel
-      var quotes = 
-      {de: [
-      '"Stilistisch reicht die Platte von Singersongwriter-Sounds bis zu hymnischem Pop. Inhaltlich geht es ums Ende. Eine kleine Affäre, aber auch der Planet, ein Traum, alles hat bekanntlich ein Ende. Nach dreizehn Songs hat auch die Platte ein Ende, aber ganz ehrlich: wir haben sofort wieder von vorne begonnen. Eine superschöne Sache!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
-      '"Emanuel Donner hat sich für sein Soloalbum \'Calm Down, It’s Over\' an eine Gratwanderung zwischen verdrossenem Realitätsverständnis und phantastischen Gedankenspielen gewagt."<br><br> - Robert Fröwein, krone.at',
-      // '"Drittea enucae"'
-      ],
-      en: [
-      '"Stylistically, the album ranges from singer-songwriter sounds to anthemic pop. Thematically, it\'s about endings. A small affair, but also the planet, a dream, everything is known to have an end. After thirteen songs, the album also comes to an end, but honestly, we immediately started over. It\'s a super beautiful thing!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
-      '"Emanuel Donner embarked on a tightrope walk between disgruntled understanding of reality and fantastic mind games for his solo album, \'Calm Down, It\'s Over\'." <br><br> - Robert Fröwein, krone.at',
-      // '"Samethung saelse"'
-      ]};
-      console.log(quotes[0])
-      var quoteIndex = 0;
-      const hiddenQuote = document.getElementById('hiddenQuote');
-      const quotesContainer = document.getElementById('quotesContainer');
-      const quotesDiv = document.getElementById('quotes');
-      function displayQuote() {
-        quotesDiv.innerHTML = quotes[lang][quoteIndex];
-        quoteIndex = (quoteIndex + 1) % quotes[lang].length;
+      }
+      h3 {
+        /* text-align: center; */
+        margin-bottom: 1rem;
+      }
+      .links{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 2rem 1rem;
+        margin: 2rem 0 1rem;
+        /* border: 1px solid #ccc; */
+        background-color: rgba(255,255,255, 0.3);
+        padding: 1rem;
+        /* text-align: center; */
+      }
+      a {
+        color: rgb(22, 74, 82) !important;
+        transition: color 0.5s ease;
+      }
+      body.dark a {
+          color: #ddd !important;
       }
 
-       // Find the longest quote
-      var longestQuote = quotes[lang].reduce(function (a, b) { return a.length > b.length ? a : b; });
+      #toggleTheme {
+        cursor: pointer;
+        margin: 0 0 .5rem;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        opacity: .8;
+      }
+      #toggleTheme img {
+        height: 100%;
+        width: 100%;
+      }
 
-// Set the hidden div text to the longest quote
-      
-      hiddenQuote.innerHTML = longestQuote;
-      quotesContainer.style.height = hiddenQuote.offsetHeight + 'px';
+      .quotes-container {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        font-style: italic;
+        /* height: 8rem; */
+        padding: 2rem 1rem;
+        background: rgba(255,255,255, 0.3);
+      }
+      #hiddenQuote {
+        visibility: hidden;
+        padding: .5rem;
+      }
+      .presskit {
+        background-color: rgba(255,255,255, 0.3);
+        padding: 1rem;
+      }
+      .presskit a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .presskit a span {
+        margin-right: .5rem;
+      }
+
+      body.dark .quotes-container {
+        background: rgba(0,0,0, 0.3);
+      }
+
+      .images {
+        margin-top: 4rem;
+        display: flex;
+        /* flex-wrap: wrap; */
+        gap: 1rem;
+
+
+      }
+      .images a {
+        flex: 1 1 0px;
+        /* width: 50%; */
+        /* height: 170px */
+      }
+      img {
+        max-width: 100%;
+        flex: 1 1 0px;
+        /* height: 170px */
+      }
+      @media screen and (max-width: 720px) {
+          .container {
+              padding: 1.2rem;
+          }
+          .links{
+              grid-template-columns: repeat(3, 1fr);
+          }
+          /* .images {
+              grid-template-columns: repeat(2, 1fr);
+          } */
+          .images {
+              display: block;
+          }
+          .images img {
+              width: 100%;
+              height: auto;
+              margin: .2rem 0
+          }
+      }
+      @media screen and (max-width: 320px) {
+          .container {
+              padding: 1rem;
+          }
+          .links{
+              grid-template-columns: repeat(2, 1fr);
+          }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Eugene Delta</h1>
+      <!-- <button id="toggleLang">Toggle Language</button> -->
+      <a id="toggleTheme">
+        <img src="./img/dark_mode.svg" alt="Enter dark mode" />
+      </a>
+      <p>
+        Eugene Delta is the music project of Vienna-based artist Emanuel Donner.
+        Their work explores the complexities of human experience through a
+        unique blend of indie pop/rock. The latest single,
+        <strong>Siren Call</strong>, released June 30th 2023, delves into the
+        paradoxes of modern life, capturing the lure and strain of our digital
+        age.
+      </p>
+      <p>
+        Eugene Delta's debut album,
+        <strong>Calm Down, It's Over</strong> captivated audiences with its
+        innovative storytelling and thought-provoking narratives. Expect a
+        deeper exploration of these themes in the forthcoming release.
+      </p>
+      <iframe
+        style="border: 0; width: 170px; height: 170px;"
+        src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/"
+        seamless
+        ><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over"
+          >Calm Down, It&#39;s Over by Eugene Delta</a
+        ></iframe
+      >
+      <!-- <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://eugenedelta.bandcamp.com/album/calm-down-its-over">Calm Down, It&#39;s Over by Eugene Delta</a></iframe> -->
+
+      <div class="link-container">
+        <div class="links">
+          <a href="https://eugenedelta.bandcamp.com/" target="_blank"
+            >Bandcamp</a
+          >
+          <a
+            href="https://open.spotify.com/artist/36Ogpxb8MDNC1CpXBVnYml?si=qBbyNcHuRdylZzTpedBLFw"
+            target="_blank"
+            >Spotify</a
+          >
+          <a href="https://www.instagram.com/eugene.delta/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.youtube.com/@eugenedelta" target="_blank"
+            >YouTube</a
+          >
+          <a href="https://www.facebook.com/eugenedelta/" target="_blank"
+            >Facebook</a
+          >
+          <a href="mailto:contact@eugenedelta.com">Email</a>
+        </div>
+        <div id="quotesContainer" class="quotes-container">
+          <div id="quotes"></div>
+          <div id="hiddenQuote"></div>
+        </div>
+        <div class="presskit">
+          <a target="_blank" href="https://presskit.eugenedelta.com">
+            <span class="material-symbols-outlined"> newsmode </span>
+            Presskit</a
+          >
+        </div>
+        <div class="images">
+          <a href="./img/ed_cigar.jpg" target="download">
+            <img src="./img/ed_cigar.jpg" alt="Eugene Delta" />
+          </a>
+          <a href="./img/ed_15.png" target="download">
+            <img src="./img/ed_15.png" alt="Eugene Delta" />
+          </a>
+          <a href="./img/ed_18.jpg" target="download">
+            <img src="./img/ed_18.jpg" alt="Eugene Delta" />
+          </a>
+          <a href="./img/ed_crowd.jpeg" target="download">
+            <img src="./img/ed_crowd.jpeg" alt="Eugene Delta" />
+          </a>
+        </div>
+        <p>© 2023 Eugene Delta</p>
+      </div>
+    </div>
+    <script>
+      let lang = "en"
+      // Quotes Carousel
+      var quotes = {
+        de: [
+          '"Stilistisch reicht die Platte von Singersongwriter-Sounds bis zu hymnischem Pop. Inhaltlich geht es ums Ende. Eine kleine Affäre, aber auch der Planet, ein Traum, alles hat bekanntlich ein Ende. Nach dreizehn Songs hat auch die Platte ein Ende, aber ganz ehrlich: wir haben sofort wieder von vorne begonnen. Eine superschöne Sache!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
+          "\"Emanuel Donner hat sich für sein Soloalbum 'Calm Down, It’s Over' an eine Gratwanderung zwischen verdrossenem Realitätsverständnis und phantastischen Gedankenspielen gewagt.\"<br><br> - Robert Fröwein, krone.at",
+          // '"Drittea enucae"'
+        ],
+        en: [
+          '"Stylistically, the album ranges from singer-songwriter sounds to anthemic pop. Thematically, it\'s about endings. A small affair, but also the planet, a dream, everything is known to have an end. After thirteen songs, the album also comes to an end, but honestly, we immediately started over. It\'s a super beautiful thing!" <br><br> - "Tonträger des Monats Juni 2021", haubentaucher.at',
+          "\"Emanuel Donner embarked on a tightrope walk between disgruntled understanding of reality and fantastic mind games for his solo album, 'Calm Down, It's Over'.\" <br><br> - Robert Fröwein, krone.at",
+          // '"Samethung saelse"'
+        ],
+      }
+      console.log(quotes[0])
+      var quoteIndex = 0
+      const hiddenQuote = document.getElementById("hiddenQuote")
+      const quotesContainer = document.getElementById("quotesContainer")
+      const quotesDiv = document.getElementById("quotes")
+      function displayQuote() {
+        quotesDiv.innerHTML = quotes[lang][quoteIndex]
+        quoteIndex = (quoteIndex + 1) % quotes[lang].length
+      }
+
+      // Find the longest quote
+      var longestQuote = quotes[lang].reduce(function (a, b) {
+        return a.length > b.length ? a : b
+      })
+
+      // Set the hidden div text to the longest quote
+
+      hiddenQuote.innerHTML = longestQuote
+      quotesContainer.style.height = hiddenQuote.offsetHeight + "px"
       // Immediately display the first quote
-      displayQuote();
+      displayQuote()
 
       // Then set the interval to keep displaying new quotes
-      setInterval(displayQuote, 25000); // Change every 5 seconds
+      setInterval(displayQuote, 25000) // Change every 5 seconds
 
       // Language Toggle
       // document.getElementById('toggleLang').addEventListener('click', function() {
@@ -249,21 +287,21 @@
       // });
 
       // Night/Day Mode Toggle
-      document.getElementById('toggleTheme').addEventListener('click', function() {
-          if(document.body.classList.contains('dark')) {
-              document.body.classList.remove('dark');
-              // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/";
-              document.getElementById('toggleTheme').innerHTML = '<img src="./img/dark_mode.svg" alt="Enter dark mode">';
+      document
+        .getElementById("toggleTheme")
+        .addEventListener("click", function () {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark")
+            // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=ffffff/linkcol=333333/transparent=true/";
+            document.getElementById("toggleTheme").innerHTML =
+              '<img src="./img/dark_mode.svg" alt="Enter dark mode">'
           } else {
-              document.body.classList.add('dark');
-              // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=333333/linkcol=ffffff/transparent=true/";
-              document.getElementById('toggleTheme').innerHTML = '<img src="./img/light_mode.svg" alt="Enter light mode">';
+            document.body.classList.add("dark")
+            // document.getElementsByTagName('iframe')[0].src = "https://bandcamp.com/EmbeddedPlayer/album=1601191172/size=small/bgcol=333333/linkcol=ffffff/transparent=true/";
+            document.getElementById("toggleTheme").innerHTML =
+              '<img src="./img/light_mode.svg" alt="Enter light mode">'
           }
-      });
-
-      
-
-
-  </script>
-</body>
+        })
+    </script>
+  </body>
 </html>
